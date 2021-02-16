@@ -77,9 +77,7 @@ class Board
                 let x = node.frame.minX + (CGFloat(j) - 0.5) * tileSize.height
                 let y = node.frame.maxY - (CGFloat(i) - 0.5) * tileSize.width
 
-                tiles[i][j].tile.position = CGPoint(x: x, y: y)
-                tiles[i][j].cordX = x
-                tiles[i][j].cordY = y
+                tiles[i][j].setCoord(pos: CGPoint(x: x, y: y))
             }
         }
     }
@@ -106,7 +104,6 @@ class Board
     
     public func gameOver(){
         print("GAME OVER")
-        var res: Bool = false
         for tilerow in tiles
         {
             for tile in tilerow

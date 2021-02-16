@@ -8,7 +8,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class MainMenuScene: SKScene {
     var board: Board!
     var firstPressTime: TimeInterval!
     var time: TimeInterval!
@@ -20,25 +20,24 @@ class GameScene: SKScene {
             print("Failed to load GameScene.sks")
             abort()
         }
-        scene.scaleMode = .aspectFill
         let cameraNode = SKCameraNode()
-        cameraNode.position = CGPoint(x: 0, y: 0)
+        cameraNode.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
         scene.addChild(cameraNode)
         scene.camera = cameraNode
+        scene.scaleMode = .aspectFill
         
         return scene
     }
     
     func setUpScene() {
-        board = Board(size: 20, bombs: 99)
+        board = Board(size: 10, bombs: 10)
         addChild(board.node)
         repositionBoard()
-        
     }
 
     func repositionBoard() {
         guard board != nil else { return }
-        let margin: CGFloat = 0
+        let margin: CGFloat = 20
         let dimension = min(size.width, size.height) - 2*margin
         board.repositionBoard(to: CGSize(width: dimension, height: dimension))
     }
@@ -51,17 +50,13 @@ class GameScene: SKScene {
     
     
     func touchMoved(toPoint pos : CGPoint) {
-        let oldPos = scene?.camera?.position ?? CGPoint(x: 0, y: 0)
-        let newPos = CGPoint(x: longTouchPosition.x - pos.x, y: longTouchPosition.y - pos.y)
-        scene?.camera?.position = CGPoint(x: (oldPos.x + newPos.x), y: (oldPos.y + newPos.y))
+       
     }
     
     func touchUp(atPoint pos : CGPoint) {
         if (time - firstPressTime < 0.3)
         {
-            if pos == longTouchPosition {
-                board.openTileAt(pos: pos)
-            }
+            board.openTileAt(pos: pos)
         }
         longPressStart = false
     }
@@ -93,7 +88,7 @@ class GameScene: SKScene {
 
     override func update(_ currentTime: TimeInterval) {
         time = currentTime
-        if (longPressStart) && (currentTime - firstPressTime > 0.3) 
+        if (longPressStart) && (currentTime - firstPressTime > 0.3)
         {
             board.flagTileAt(pos: longTouchPosition)
             longPressStart = false

@@ -16,6 +16,8 @@
 		648DE19325C596DE00FBDFF1 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9469125B75A0300A034BF /* Tile.swift */; };
 		648DE19525C596E000FBDFF1 /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9469425BA020700A034BF /* Texture.swift */; };
 		648DE1C425D3196700FBDFF1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 648DE1C325D3196700FBDFF1 /* GameScene.sks */; };
+		64D0975925D5AC3A00D50032 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0975825D5AC3A00D50032 /* MainMenu.swift */; };
+		64DEC5C025D5B33000687FF6 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 64DEC5BF25D5B33000687FF6 /* MainMenu.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		64C9468E25B759F400A034BF /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		64C9469125B75A0300A034BF /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		64C9469425BA020700A034BF /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		64D0975825D5AC3A00D50032 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenu.swift; path = /Users/nikmed/Documents/Xcode_projects/Minesweeper/Minesweeper/MainMenu.swift; sourceTree = "<absolute>"; };
+		64DEC5BF25D5B33000687FF6 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +61,13 @@
 				64C9468D25B759DE00A034BF /* Game */,
 				648DE17F25C5944300FBDFF1 /* AppDelegate.swift */,
 				648DE18125C5944300FBDFF1 /* GameScene.swift */,
+				64D0975825D5AC3A00D50032 /* MainMenu.swift */,
 				648DE1C325D3196700FBDFF1 /* GameScene.sks */,
 				648DE18325C5944300FBDFF1 /* GameViewController.swift */,
 				648DE18525C5944300FBDFF1 /* Main.storyboard */,
 				648DE18825C5944400FBDFF1 /* Assets.xcassets */,
 				648DE18A25C5944400FBDFF1 /* Info.plist */,
+				64DEC5BF25D5B33000687FF6 /* MainMenu.sks */,
 			);
 			path = Minesweeper;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				648DE18925C5944400FBDFF1 /* Assets.xcassets in Resources */,
+				64DEC5C025D5B33000687FF6 /* MainMenu.sks in Resources */,
 				648DE1C425D3196700FBDFF1 /* GameScene.sks in Resources */,
 				648DE18725C5944300FBDFF1 /* Main.storyboard in Resources */,
 			);
@@ -148,6 +155,7 @@
 			files = (
 				648DE18225C5944300FBDFF1 /* GameScene.swift in Sources */,
 				648DE19525C596E000FBDFF1 /* Texture.swift in Sources */,
+				64D0975925D5AC3A00D50032 /* MainMenu.swift in Sources */,
 				648DE18425C5944300FBDFF1 /* GameViewController.swift in Sources */,
 				648DE19325C596DE00FBDFF1 /* Tile.swift in Sources */,
 				648DE19125C596DB00FBDFF1 /* Board.swift in Sources */,
